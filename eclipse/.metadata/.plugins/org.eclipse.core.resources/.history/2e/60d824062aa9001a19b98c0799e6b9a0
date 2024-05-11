@@ -1,0 +1,36 @@
+package me.client.autosave;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import net.minecraft.client.Minecraft;
+
+public class SaveLoad {
+
+	private File dir;
+	private File dataFile;
+	
+	public SaveLoad() {
+		dir = new File(Minecraft.getMinecraft().mcDataDir, "tutorial");
+		if (!dir.exists()) {
+			dir.mkdir();
+		}
+		dataFile = new File(dir, "data.txt");
+		if (!dataFile.exists()) {
+			try {
+				dataFile.createNewFile();
+			} catch (IOException e) {e.printStackTrace();}
+		}
+	}
+	
+	public void save() {
+		ArrayList<String> toSave = new ArrayList<String>();
+		
+		
+	}
+	
+	public void load() {
+		
+	}
+}

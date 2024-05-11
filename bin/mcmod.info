@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tutorialclient",
+  "name": "Tutorial Client",
+  "description": "Go subscribe to SebSB on Youtube!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["SebSB"],
+  "credits": "SebSB",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

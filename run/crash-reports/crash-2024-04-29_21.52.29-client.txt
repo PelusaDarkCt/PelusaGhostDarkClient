@@ -1,0 +1,140 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 29/04/24 09:52 PM
+Description: Ticking entity
+
+java.lang.IndexOutOfBoundsException
+	at java.nio.Buffer.checkIndex(Buffer.java:545)
+	at java.nio.DirectByteBuffer.get(DirectByteBuffer.java:252)
+	at org.lwjgl.input.Keyboard.isKeyDown(Keyboard.java:407)
+	at me.client.module.combat.BlockHit.onPlayerTick(BlockCOMbo.java:80)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_10_BlockCOMbo_onPlayerTick_PlayerTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:55)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onPlayerPreTick(FMLCommonHandler.java:352)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:208)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdate(EntityPlayerSP.java:117)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:1860)
+	at net.minecraft.world.World.updateEntity(World.java:1829)
+	at net.minecraft.world.World.updateEntities(World.java:1661)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2089)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1024)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:349)
+	at net.minecraft.client.main.Main.main(SourceFile:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.nio.Buffer.checkIndex(Buffer.java:545)
+	at java.nio.DirectByteBuffer.get(DirectByteBuffer.java:252)
+	at org.lwjgl.input.Keyboard.isKeyDown(Keyboard.java:407)
+	at me.client.module.combat.BlockHit.onPlayerTick(BlockCOMbo.java:80)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_10_BlockCOMbo_onPlayerTick_PlayerTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:55)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onPlayerPreTick(FMLCommonHandler.java:352)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:208)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdate(EntityPlayerSP.java:117)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:1860)
+	at net.minecraft.world.World.updateEntity(World.java:1829)
+
+-- Entity being ticked --
+Details:
+	Entity Type: null (net.minecraft.client.entity.EntityPlayerSP)
+	Entity ID: 112
+	Entity Name: Player984
+	Entity's Exact location: -301.16, 3.41, 250.75
+	Entity's Block location: -302.00,3.00,250.00 - World: (-302,3,250), Chunk: (at 2,0,10 in -19,15; contains blocks -304,0,240 to -289,255,255), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Entity's Momentum: -0.04, -0.10, 0.09
+	Entity's Rider: ~~ERROR~~ NullPointerException: null
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:1661)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player984'/112, l='MpServer', x=-301.16, y=3.41, z=250.75]]
+	Chunk stats: MultiplayerChunkCache: 0, 0
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: -844.00,4.00,569.00 - World: (-844,4,569), Chunk: (at 4,0,9 in -53,35; contains blocks -848,0,560 to -833,255,575), Region: (-2,1; contains chunks -64,32 to -33,63, blocks -1024,0,512 to -513,255,1023)
+	Level time: 197775 game time, 663 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 90 total; [EntityItem['item.tile.dirt.default'/128, l='MpServer', x=-283.09, y=1.19, z=256.50], EntityItem['item.tile.dirt.default'/129, l='MpServer', x=-284.69, y=1.19, z=256.88], EntityItem['item.tile.dirt.default'/130, l='MpServer', x=-326.59, y=2.19, z=243.94], EntityItem['item.tile.dirt.default'/131, l='MpServer', x=-328.59, y=2.19, z=244.88], EntityItem['item.tile.dirt.default'/132, l='MpServer', x=-329.88, y=2.19, z=243.31], EntityItem['item.tile.dirt.default'/133, l='MpServer', x=-328.31, y=2.19, z=242.75], EntityItem['item.tile.dirt.default'/134, l='MpServer', x=-324.94, y=2.19, z=242.13], EntityItem['item.tile.dirt.default'/135, l='MpServer', x=-330.41, y=2.19, z=241.88], EntityItem['item.tile.dirt.default'/136, l='MpServer', x=-326.53, y=1.19, z=242.50], EntityItem['item.tile.dirt.default'/137, l='MpServer', x=-302.44, y=1.19, z=209.72], EntityItem['item.tile.dirt.default'/138, l='MpServer', x=-303.09, y=1.19, z=208.09], EntityItem['item.tile.dirt.default'/139, l='MpServer', x=-300.81, y=1.19, z=208.06], EntityArrow['Arrow'/140, l='MpServer', x=-293.42, y=1.23, z=221.84], EntityArrow['Arrow'/141, l='MpServer', x=-266.34, y=1.10, z=257.99], EntityItem['item.tile.dirt.default'/142, l='MpServer', x=-324.69, y=2.19, z=239.56], EntityItem['item.tile.dirt.default'/143, l='MpServer', x=-327.63, y=2.19, z=238.63], EntityItem['item.tile.dirt.default'/144, l='MpServer', x=-323.53, y=2.19, z=238.13], EntityItem['item.tile.dirt.default'/145, l='MpServer', x=-325.44, y=2.19, z=238.38], EntityItem['item.tile.dirt.default'/146, l='MpServer', x=-326.66, y=1.19, z=238.59], EntityItem['item.tile.dirt.default'/147, l='MpServer', x=-326.13, y=1.19, z=239.41], EntityXPOrb['Experience Orb'/148, l='MpServer', x=-305.66, y=3.39, z=218.00], EntityItem['item.tile.dirt.default'/149, l='MpServer', x=-304.50, y=2.19, z=215.34], EntityItem['item.tile.dirt.default'/150, l='MpServer', x=-306.91, y=2.19, z=215.25], EntityItem['item.tile.dirt.default'/151, l='MpServer', x=-306.44, y=1.19, z=214.88], EntityItem['item.tile.dirt.default'/152, l='MpServer', x=-309.28, y=2.19, z=214.44], EntityItem['item.tile.dirt.default'/153, l='MpServer', x=-306.47, y=1.19, z=213.97], EntityItem['item.tile.dirt.default'/154, l='MpServer', x=-305.13, y=1.19, z=213.53], EntityItem['item.tile.dirt.default'/155, l='MpServer', x=-306.41, y=1.19, z=212.03], EntityItem['item.tile.dirt.default'/156, l='MpServer', x=-308.50, y=1.19, z=210.88], EntityItem['item.tile.dirt.default'/157, l='MpServer', x=-307.44, y=1.19, z=210.13], EntityItem['item.tile.dirt.default'/158, l='MpServer', x=-309.31, y=2.19, z=209.47], EntityItem['item.tile.dirt.default'/159, l='MpServer', x=-307.38, y=2.19, z=208.44], EntityXPOrb['Experience Orb'/160, l='MpServer', x=-307.19, y=3.39, z=219.25], EntityXPOrb['Experience Orb'/161, l='MpServer', x=-305.75, y=3.39, z=221.41], EntityXPOrb['Experience Orb'/162, l='MpServer', x=-307.31, y=3.39, z=219.75], EntityArrow['Arrow'/163, l='MpServer', x=-276.64, y=1.41, z=215.40], EntityArrow['Arrow'/164, l='MpServer', x=-281.56, y=1.79, z=225.32], EntityArrow['Arrow'/165, l='MpServer', x=-260.98, y=1.34, z=235.92], EntityItem['item.item.arrow'/166, l='MpServer', x=-265.13, y=3.19, z=266.38], EntityItem['item.item.bone'/167, l='MpServer', x=-265.38, y=3.19, z=266.94], EntityItem['item.tile.dirt.default'/168, l='MpServer', x=-324.88, y=1.19, z=211.63], EntityItem['item.tile.dirt.default'/169, l='MpServer', x=-322.97, y=1.19, z=211.88], EntityItem['item.tile.dirt.default'/170, l='MpServer', x=-323.22, y=0.19, z=210.75], EntityItem['item.tile.dirt.default'/171, l='MpServer', x=-321.47, y=1.19, z=209.78], EntityItem['item.tile.dirt.default'/172, l='MpServer', x=-325.44, y=1.19, z=209.13], EntityItem['item.tile.dirt.default'/173, l='MpServer', x=-321.13, y=2.19, z=208.56], EntityItem['item.tile.dirt.default'/174, l='MpServer', x=-323.28, y=1.19, z=208.72], EntityItem['item.tile.dirt.default'/175, l='MpServer', x=-323.38, y=0.19, z=209.69], EntitySpider['Spider'/176, l='MpServer', x=-327.50, y=4.00, z=213.50], EntityItem['item.tile.dirt.default'/177, l='MpServer', x=-301.59, y=1.19, z=205.72], EntityItem['item.tile.dirt.default'/178, l='MpServer', x=-302.97, y=1.19, z=206.47], EntityItem['item.tile.dirt.default'/179, l='MpServer', x=-303.53, y=1.19, z=205.16], EntityItem['item.tile.dirt.default'/180, l='MpServer', x=-303.88, y=0.19, z=207.31], EntityXPOrb['Experience Orb'/181, l='MpServer', x=-339.94, y=3.39, z=266.28], EntityXPOrb['Experience Orb'/182, l='MpServer', x=-343.41, y=3.39, z=264.13], EntityXPOrb['Experience Orb'/183, l='MpServer', x=-341.38, y=3.39, z=266.19], EntityItem['item.tile.dirt.default'/184, l='MpServer', x=-304.13, y=1.19, z=206.47], EntitySpider['Spider'/185, l='MpServer', x=-274.72, y=4.00, z=301.41], EntityItem['item.item.bone'/186, l='MpServer', x=-274.63, y=3.19, z=290.63], EntityItem['item.item.bone'/187, l='MpServer', x=-280.88, y=3.19, z=297.88], EntityCreeper['Creeper'/188, l='MpServer', x=-275.13, y=4.00, z=288.81], EntityItem['item.item.arrow'/189, l='MpServer', x=-331.69, y=3.19, z=301.19], EntityItem['item.item.bone'/190, l='MpServer', x=-331.72, y=3.19, z=300.91], EntitySlime['Slime'/191, l='MpServer', x=-321.28, y=4.00, z=300.59], EntitySlime['Slime'/192, l='MpServer', x=-333.50, y=4.09, z=302.78], EntityItem['item.item.arrow'/193, l='MpServer', x=-322.13, y=3.19, z=205.16], EntityItem['item.item.bone'/194, l='MpServer', x=-322.41, y=3.19, z=204.59], EntityItem['item.item.arrow'/195, l='MpServer', x=-247.09, y=3.19, z=278.97], EntityItem['item.item.bone'/196, l='MpServer', x=-247.03, y=3.19, z=278.78], EntityWitch['Witch'/197, l='MpServer', x=-267.31, y=4.00, z=302.09], EntityItem['item.item.bone'/198, l='MpServer', x=-346.00, y=3.19, z=302.44], EntitySpider['Spider'/199, l='MpServer', x=-344.78, y=4.00, z=201.19], EntityItem['item.item.arrow'/200, l='MpServer', x=-351.25, y=3.19, z=198.66], EntitySlime['Slime'/201, l='MpServer', x=-338.78, y=4.00, z=201.91], EntityItem['item.item.rottenFlesh'/202, l='MpServer', x=-247.09, y=3.19, z=303.69], EntityItem['item.item.rottenFlesh'/203, l='MpServer', x=-246.13, y=3.19, z=303.06], EntityPlayerSP['Player984'/112, l='MpServer', x=-301.16, y=3.41, z=250.75], EntitySlime['Slime'/115, l='MpServer', x=-310.31, y=5.16, z=254.38], EntitySpider['Spider'/116, l='MpServer', x=-307.84, y=4.00, z=244.28], EntityItem['item.item.rottenFlesh'/117, l='MpServer', x=-297.88, y=3.19, z=227.47], EntityItem['item.item.rottenFlesh'/118, l='MpServer', x=-284.84, y=3.19, z=249.88], EntityItem['item.tile.dirt.default'/119, l='MpServer', x=-284.66, y=0.19, z=255.88], EntityItem['item.tile.dirt.default'/120, l='MpServer', x=-285.31, y=2.19, z=255.63], EntityItem['item.tile.dirt.default'/121, l='MpServer', x=-283.16, y=0.19, z=254.22], EntityItem['item.tile.dirt.default'/122, l='MpServer', x=-281.00, y=2.19, z=254.44], EntityItem['item.tile.dirt.default'/123, l='MpServer', x=-282.63, y=1.19, z=252.84], EntityItem['item.tile.dirt.default'/124, l='MpServer', x=-281.84, y=1.19, z=253.13], EntitySpider['Spider'/125, l='MpServer', x=-313.50, y=4.00, z=271.94], EntityArrow['Arrow'/126, l='MpServer', x=-285.72, y=1.75, z=230.38], EntitySlime['Slime'/127, l='MpServer', x=-281.16, y=4.00, z=265.75]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:347)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2536)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:370)
+	at net.minecraft.client.main.Main.main(SourceFile:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_402-402, OpenLogic-OpenJDK
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), OpenLogic-OpenJDK
+	Memory: 582910416 bytes (555 MB) / 838336512 bytes (799 MB) up to 1881145344 bytes (1794 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.19 Powered by Forge 11.15.1.1722 6 mods loaded, 6 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeBin-1.8.9-11.15.1.1722.jar) 
+	UCHIJAAAA	Forge{11.15.1.1722} [Minecraft Forge] (forgeBin-1.8.9-11.15.1.1722.jar) 
+	UCHIJAAAA	Pelusa Dark Client{b1} [Pelusa Dark Client] (ghostdark-1.0.jar) 
+	UCHIJAAAA	examplemod{1.0} [examplemod] (KeystrokesExplicit.jar) 
+	UCHIJAAAA	keystrokesmod{7.0} [KeystrokesMod] (KeystrokesExplicit.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'Intel' Version: '4.0.0 - Build 10.18.10.5161' Renderer: 'Intel(R) HD Graphics 2500'
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: Intel(R) HD Graphics 2500 GL version 4.0.0 - Build 10.18.10.5161, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz

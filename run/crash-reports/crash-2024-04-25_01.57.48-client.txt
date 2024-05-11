@@ -1,0 +1,110 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 25/04/24 01:57 AM
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at me.client.module.combat.AutoClicker.onTick(AutoClicker.java:38)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_15_AutoClicker_onTick_RenderTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:55)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onRenderTickStart(FMLCommonHandler.java:342)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1049)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:349)
+	at net.minecraft.client.main.Main.main(SourceFile:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at me.client.module.combat.AutoClicker.onTick(AutoClicker.java:38)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_15_AutoClicker_onTick_RenderTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:55)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player328'/170, l='MpServer', x=-883.56, y=4.00, z=701.08]]
+	Chunk stats: MultiplayerChunkCache: 289, 289
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: -844.00,4.00,569.00 - World: (-844,4,569), Chunk: (at 4,0,9 in -53,35; contains blocks -848,0,560 to -833,255,575), Region: (-2,1; contains chunks -64,32 to -33,63, blocks -1024,0,512 to -513,255,1023)
+	Level time: 153756 game time, 153756 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: true), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 119 total; [EntityZombie['Zombie'/152832, l='MpServer', x=-883.72, y=4.00, z=694.17], EntityZombie['Zombie'/300544, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/167687, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/315138, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/296462, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/302350, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/204040, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/250895, l='MpServer', x=-875.94, y=4.00, z=690.66], EntityZombie['Zombie'/65044, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/311059, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/200217, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/193821, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/309284, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/205095, l='MpServer', x=-873.25, y=4.00, z=689.81], EntityZombie['Zombie'/65320, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/152618, l='MpServer', x=-883.72, y=4.00, z=695.65], EntityZombie['Zombie'/317485, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/64812, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/166958, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/204337, l='MpServer', x=-872.59, y=4.00, z=707.31], EntityZombie['Zombie'/319031, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityVillager['Villager'/52, l='MpServer', x=-932.50, y=4.00, z=751.47], EntityVillager['Villager'/53, l='MpServer', x=-936.72, y=4.00, z=759.84], EntityZombie['Zombie'/312881, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/269618, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/153141, l='MpServer', x=-883.31, y=4.00, z=694.91], EntityVillager['Villager'/57, l='MpServer', x=-920.07, y=4.00, z=623.33], EntityZombie['Zombie'/252473, l='MpServer', x=-883.31, y=4.00, z=695.55], EntityChicken['Chicken'/59, l='MpServer', x=-921.56, y=4.00, z=719.28], EntityItem['item.item.egg'/60, l='MpServer', x=-922.06, y=4.00, z=719.00], EntitySheep['Sheep'/61, l='MpServer', x=-921.53, y=4.00, z=727.66], EntityPlayerSP['Player328'/170, l='MpServer', x=-883.56, y=4.00, z=701.08], EntityZombie['Zombie'/200769, l='MpServer', x=-886.88, y=4.00, z=712.78], EntityVillager['Villager'/68, l='MpServer', x=-845.72, y=4.00, z=770.41], EntityZombie['Zombie'/298816, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/302146, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityVillager['Villager'/72, l='MpServer', x=-874.42, y=1.00, z=636.34], EntitySlime['Slime'/73, l='MpServer', x=-902.46, y=4.00, z=690.01], EntityCreeper['Creeper'/74, l='MpServer', x=-864.32, y=1.00, z=710.57], EntityZombie['Zombie'/192332, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/300619, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityVillager['Villager'/79, l='MpServer', x=-877.25, y=1.00, z=622.38], EntityZombie['Zombie'/282709, l='MpServer', x=-883.72, y=4.00, z=696.34], EntityVillager['Villager'/81, l='MpServer', x=-843.28, y=1.00, z=632.41], EntityZombie['Zombie'/268374, l='MpServer', x=-883.31, y=4.00, z=694.09], EntityZombie['Zombie'/303958, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/314967, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityVillager['Villager'/83, l='MpServer', x=-833.69, y=1.00, z=622.31], EntityZombie['Zombie'/290128, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/203611, l='MpServer', x=-883.31, y=4.00, z=697.33], EntityPig['Pig'/92, l='MpServer', x=-810.00, y=4.00, z=729.00], EntityZombie['Zombie'/167260, l='MpServer', x=-890.28, y=4.00, z=697.06], EntityZombie['Zombie'/167516, l='MpServer', x=-880.16, y=4.00, z=696.34], EntityZombie['Zombie'/63072, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/298597, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/295782, l='MpServer', x=-883.72, y=4.00, z=698.94], EntityZombie['Zombie'/292193, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/319331, l='MpServer', x=-883.72, y=4.00, z=693.28], EntityZombie['Zombie'/201070, l='MpServer', x=-879.04, y=4.00, z=690.77], EntityZombie['Zombie'/152940, l='MpServer', x=-883.72, y=4.00, z=693.28], EntityZombie['Zombie'/298090, l='MpServer', x=-883.72, y=4.00, z=696.47], EntityZombie['Zombie'/249459, l='MpServer', x=-883.31, y=4.00, z=697.18], EntityZombie['Zombie'/306032, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/168830, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/317305, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/299899, l='MpServer', x=-883.72, y=4.00, z=698.25], EntityZombie['Zombie'/64896, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/265861, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/310917, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/205441, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/65155, l='MpServer', x=-888.88, y=4.00, z=705.84], EntityZombie['Zombie'/294272, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/168591, l='MpServer', x=-879.75, y=4.00, z=695.13], EntityZombie['Zombie'/262030, l='MpServer', x=-883.31, y=4.00, z=696.33], EntityZombie['Zombie'/203924, l='MpServer', x=-884.59, y=4.00, z=681.06], EntityZombie['Zombie'/198043, l='MpServer', x=-904.25, y=4.00, z=699.22], EntityZombie['Zombie'/312732, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/67741, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/307353, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/189084, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/289445, l='MpServer', x=-883.72, y=4.00, z=694.78], EntityZombie['Zombie'/185771, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/200106, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/200362, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/298413, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/200105, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/304309, l='MpServer', x=-883.31, y=4.00, z=704.69], EntitySlime['Slime'/150714, l='MpServer', x=-951.50, y=4.14, z=709.27], EntityZombie['Zombie'/166331, l='MpServer', x=-883.72, y=4.00, z=693.25], EntityZombie['Zombie'/203454, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/203453, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/203196, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/201415, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/187335, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/64710, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/169161, l='MpServer', x=-882.34, y=4.00, z=684.81], EntityZombie['Zombie'/300239, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/293576, l='MpServer', x=-883.72, y=4.00, z=694.11], EntityZombie['Zombie'/253901, l='MpServer', x=-883.31, y=4.00, z=699.69], EntityZombie['Zombie'/190674, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/39889, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/319440, l='MpServer', x=-884.90, y=6.00, z=692.45], EntityZombie['Zombie'/319187, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/306141, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/202969, l='MpServer', x=-883.31, y=4.00, z=702.06], EntityZombie['Zombie'/63196, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/309466, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/262885, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/315622, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/166119, l='MpServer', x=-897.19, y=4.00, z=695.25], EntityZombie['Zombie'/166628, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/307948, l='MpServer', x=-883.72, y=4.00, z=704.69], EntityZombie['Zombie'/264174, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/304119, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/313335, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/277233, l='MpServer', x=-883.31, y=4.00, z=704.69], EntityZombie['Zombie'/317682, l='MpServer', x=-883.31, y=4.00, z=698.11], EntityZombie['Zombie'/291581, l='MpServer', x=-883.72, y=4.00, z=697.31], EntityZombie['Zombie'/60155, l='MpServer', x=-883.31, y=4.00, z=704.69]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:347)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2536)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
+	at net.minecraft.client.main.Main.main(SourceFile:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_402-402, OpenLogic-OpenJDK
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), OpenLogic-OpenJDK
+	Memory: 287989792 bytes (274 MB) / 883425280 bytes (842 MB) up to 1881145344 bytes (1794 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.19 Powered by Forge 11.15.1.1722 6 mods loaded, 6 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeBin-1.8.9-11.15.1.1722.jar) 
+	UCHIJAAAA	Forge{11.15.1.1722} [Minecraft Forge] (forgeBin-1.8.9-11.15.1.1722.jar) 
+	UCHIJAAAA	Pelusa Dark Client{b1} [Pelusa Dark Client] (ghostdark-1.0.jar) 
+	UCHIJAAAA	examplemod{1.0} [examplemod] (KeystrokesExplicit.jar) 
+	UCHIJAAAA	keystrokesmod{7.0} [KeystrokesMod] (KeystrokesExplicit.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'Intel' Version: '4.0.0 - Build 10.18.10.5161' Renderer: 'Intel(R) HD Graphics 2500'
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: Intel(R) HD Graphics 2500 GL version 4.0.0 - Build 10.18.10.5161, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz

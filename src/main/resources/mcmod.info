@@ -1,0 +1,16 @@
+[
+{
+  "modid": "darkclient",
+  "name": "Pelusa Dark Client",
+  "description": "Este Ghost Client lo estoy Desarrollando y recuerda suscribirte a mi canal PelusaDark.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "@PelusaDarkCheats",
+  "updateUrl": "",
+  "authorList": ["PelusaDark,Michaelmodz"],
+  "credits": "Gracias a HeroCode Por Proporcionar el SRC de la GUI y Al equipo de Raben b++,liquidbounce,Skilled,Entre otros por su SRC de algunos modulos :)",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

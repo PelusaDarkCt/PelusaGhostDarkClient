@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+<fullyQualifiedTypeName name="me.client.module.Module"/>
+<fullyQualifiedTypeName name="net.minecraftforge.common.MinecraftForge"/>
+<fullyQualifiedTypeName name="me.client.settings.Setting"/>
+<fullyQualifiedTypeName name="me.client.module.misc.SelfDestruct"/>
+<fullyQualifiedTypeName name="me.client.Dark"/>
+</qualifiedTypeNameHistroy>

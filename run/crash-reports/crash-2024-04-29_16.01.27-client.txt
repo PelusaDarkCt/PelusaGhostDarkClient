@@ -1,0 +1,110 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 29/04/24 04:01 PM
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at me.client.module.combat.AutoClicker.onTick(AutoClicker.java:38)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_16_AutoClicker_onTick_RenderTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:55)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onRenderTickStart(FMLCommonHandler.java:342)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1049)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:349)
+	at net.minecraft.client.main.Main.main(SourceFile:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at me.client.module.combat.AutoClicker.onTick(AutoClicker.java:38)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_16_AutoClicker_onTick_RenderTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:55)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player453'/115, l='MpServer', x=-473.38, y=4.00, z=106.68]]
+	Chunk stats: MultiplayerChunkCache: 25, 25
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: -844.00,4.00,569.00 - World: (-844,4,569), Chunk: (at 4,0,9 in -53,35; contains blocks -848,0,560 to -833,255,575), Region: (-2,1; contains chunks -64,32 to -33,63, blocks -1024,0,512 to -513,255,1023)
+	Level time: 184632 game time, 2513 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 21 total; [EntitySlime['Slime'/128, l='MpServer', x=-497.24, y=4.99, z=85.30], EntitySlime['Slime'/129, l='MpServer', x=-505.25, y=5.04, z=89.77], EntitySlime['Slime'/130, l='MpServer', x=-509.84, y=4.00, z=74.19], EntitySlime['Slime'/131, l='MpServer', x=-514.78, y=4.00, z=114.31], EntitySlime['Slime'/132, l='MpServer', x=-514.79, y=4.47, z=69.35], EntityXPOrb['Experience Orb'/133, l='MpServer', x=-511.19, y=-7.13, z=55.88], EntitySlime['Slime'/134, l='MpServer', x=-512.84, y=4.00, z=57.91], EntityXPOrb['Experience Orb'/135, l='MpServer', x=-513.53, y=-7.13, z=53.81], EntitySlime['Slime'/136, l='MpServer', x=-519.64, y=4.10, z=61.35], EntityPlayerSP['Player453'/115, l='MpServer', x=-473.38, y=4.00, z=106.68], EntityXPOrb['Experience Orb'/117, l='MpServer', x=-465.88, y=4.00, z=106.31], EntityXPOrb['Experience Orb'/118, l='MpServer', x=-465.85, y=4.00, z=107.34], EntitySlime['Slime'/119, l='MpServer', x=-472.25, y=5.01, z=106.79], EntitySlime['Slime'/120, l='MpServer', x=-470.77, y=4.26, z=105.84], EntitySlime['Slime'/121, l='MpServer', x=-477.64, y=5.57, z=104.66], EntitySlime['Slime'/122, l='MpServer', x=-491.49, y=4.26, z=101.21], EntitySlime['Slime'/123, l='MpServer', x=-493.56, y=4.99, z=100.64], EntitySlime['Slime'/124, l='MpServer', x=-491.30, y=4.26, z=93.53], EntitySlime['Slime'/125, l='MpServer', x=-467.94, y=4.00, z=67.09], EntitySlime['Slime'/126, l='MpServer', x=-497.20, y=4.77, z=89.89], EntitySlime['Slime'/127, l='MpServer', x=-499.10, y=4.62, z=87.58]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:347)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2536)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:378)
+	at net.minecraft.client.main.Main.main(SourceFile:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_402-402, OpenLogic-OpenJDK
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), OpenLogic-OpenJDK
+	Memory: 136868736 bytes (130 MB) / 869793792 bytes (829 MB) up to 1881145344 bytes (1794 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.19 Powered by Forge 11.15.1.1722 6 mods loaded, 6 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeBin-1.8.9-11.15.1.1722.jar) 
+	UCHIJAAAA	Forge{11.15.1.1722} [Minecraft Forge] (forgeBin-1.8.9-11.15.1.1722.jar) 
+	UCHIJAAAA	Pelusa Dark Client{b1} [Pelusa Dark Client] (ghostdark-1.0.jar) 
+	UCHIJAAAA	examplemod{1.0} [examplemod] (KeystrokesExplicit.jar) 
+	UCHIJAAAA	keystrokesmod{7.0} [KeystrokesMod] (KeystrokesExplicit.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'Intel' Version: '4.0.0 - Build 10.18.10.5161' Renderer: 'Intel(R) HD Graphics 2500'
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: Intel(R) HD Graphics 2500 GL version 4.0.0 - Build 10.18.10.5161, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz

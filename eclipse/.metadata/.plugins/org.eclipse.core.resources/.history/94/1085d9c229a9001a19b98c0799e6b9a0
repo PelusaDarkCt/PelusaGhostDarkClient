@@ -1,0 +1,25 @@
+package me.client.autosave;
+
+import java.io.File;
+
+import net.minecraft.client.Minecraft;
+
+public class SaveLoad {
+
+	private File dir;
+	
+	public SaveLoad() {
+		dir = new File(Minecraft.getMinecraft().mcDataDir, "tutorial");
+		if (!dir.exists()) {
+			dir.mkdir();
+		}
+	}
+	
+	public void save() {
+		
+	}
+	
+	public void load() {
+		
+	}
+}

@@ -1,0 +1,66 @@
+MOD:ClickGUI:false:54
+MOD:HUD:true:0
+MOD:Sprint:false:0
+MOD:Velocity:false:0
+MOD:AntiBot:false:0
+MOD:SelfDestruct:false:0
+MOD:AimAssist:false:33
+MOD:FastPlace:true:0
+MOD:WTap:true:0
+MOD:STap:false:0
+MOD:HitSelect:false:0
+MOD:Reach:false:0
+MOD:JumpReset:true:0
+MOD:BlockHit(Beta):false:0
+MOD:Nametags:false:0
+MOD:Parkour:false:0
+MOD:FastBridge:false:0
+MOD:FastLeave:false:0
+MOD:AntiAfk:false:0
+MOD:Delay Fix:true:0
+MOD:Fullbright:true:0
+MOD:Auto Tool:false:0
+SET:Horizontal:Velocity:0.0
+SET:Vertical:Velocity:100.0
+SET:Chanse:Velocity:1.0
+SET:OnlyGround:Velocity:0.0
+SET:OnlyMove:Velocity:0.0
+SET:OnlySprint:Velocity:0.0
+SET:Speed:AimAssist:10.0
+SET:FOV:AimAssist:180.0
+SET:Distance:AimAssist:4.38
+SET:Teams:AimAssist:0.0
+SET:OnlySworld:AimAssist:0.0
+SET:OnlyBlocks:FastPlace:0.0
+SET:Delay:FastPlace:0.28
+SET:Duracion:WTap:151.0
+SET:Cooldown:WTap:305.0
+SET:delay:WTap:2.0
+SET:MinDist:WTap:1.02
+SET:MaxDist:WTap:3.5
+SET:OnlyGround:WTap:0.0
+SET:OnlySprint:WTap:0.0
+SET:Duracion:STap:5.0
+SET:Cooldown:STap:10.0
+SET:delay:STap:0.0
+SET:MinDist:STap:0.0
+SET:MaxDist:STap:10.0
+SET:OnlyGround:STap:0.0
+SET:OnlySprint:STap:0.0
+SET:Periodo:HitSelect:10.0
+SET:CLicks:HitSelect:5.0
+SET:ReachMax:Reach:3.0
+SET:ReachMin:Reach:3.0
+SET:Chanse:Reach:0.2
+SET:Trade Mode:Reach:0.0
+SET:Combo Mode:Reach:0.0
+SET:GhostTap Mode:Reach:0.0
+SET:Only Sprint:Reach:0.0
+SET:Chanse:JumpReset:1.0
+SET:OnlyForWard:JumpReset:0.0
+SET:Duracion:BlockHit(Beta):150.0
+SET:Cooldown:BlockHit(Beta):250.0
+SET:MinDist:BlockHit(Beta):1.3
+SET:MaxDist:BlockHit(Beta):3.5
+SET:AttkOnly:BlockHit(Beta):0.0
+SET:OnlyBlocks:FastBridge:0.0
