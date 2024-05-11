@@ -25,8 +25,9 @@ Entre Otros....
 Y Perdon Si ves Fallos Ortograficos etc.
 Tambien Aprovecho a agradecer al equipo de **lowkey, herocode, Liquidbounce, raven b++, y skilled**. Ya que me pude Guiar de algunos de sus Modulos.
 
-
-
+|
+|
+|
 
 
 English :
