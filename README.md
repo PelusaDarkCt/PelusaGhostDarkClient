@@ -14,7 +14,7 @@ nah bueno pasala bien crack y recuerda el **dicho** :
 Tambien Puedes Unirte A Mi Server De Discord Donde Subo Todas Mis Creaciones Y Mas
 https://discord.gg/ug6JShtd
 
-*ALGUNAS FUNCIONES DEL GHOST*
+*ALGUNAS FUNCIONES DEL GHOST:*
 aimassit
 hitselect
 wtap
