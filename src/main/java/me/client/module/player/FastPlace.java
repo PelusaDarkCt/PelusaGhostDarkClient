@@ -19,7 +19,7 @@ public class FastPlace extends Module {
     private boolean ConBloqueP;
     public FastPlace() {
         super("FastPlace", "Coloca bloques rapidamente sin el retraso de Minecraft", Category.PLAYER);
-        Dark.instance.settingsManager.rSetting(new Setting("OnlyBlocks",this,false));
+        Dark.instance.settingsManager.rSetting(new Setting("OnlyBlocks",this,true));
         rightClickDelayTimerField = ReflectionHelper.findField(Minecraft.class, "rightClickDelayTimer", "field_71467_ac");
         if (rightClickDelayTimerField != null) {
             rightClickDelayTimerField.setAccessible(true);

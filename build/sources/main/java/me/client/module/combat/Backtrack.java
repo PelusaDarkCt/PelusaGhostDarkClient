@@ -8,4 +8,6 @@ Dia 1:Algun dia.....
 
 Dia 2:Creo que Tomate Prestado el de Liquidbounce digo, digo jeje.
 
+Dia 3:Espera- Como que kotlin? Esto va estar feo....
+
 */

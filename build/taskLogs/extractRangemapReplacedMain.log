@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 90 files
+Processing 93 files
 processing Main.java
 processing me\client\Dark.java
 processing me\client\autosave\SaveLoad.java
@@ -30,6 +30,7 @@ processing me\client\module\combat\JumpReset.java
 processing me\client\module\combat\JumpResetv2.java
 processing me\client\module\combat\Reach.java
 processing me\client\module\combat\STap.java
+processing me\client\module\combat\ShifTap.java
 processing me\client\module\combat\Velocity.java
 processing me\client\module\combat\Wtap.java
 processing me\client\module\combat\backtrackv2\PacketDelayModule.java
@@ -59,7 +60,9 @@ processing me\client\module\player\FastBridge.java
 processing me\client\module\player\FastPlace.java
 processing me\client\module\player\FreeCam.java
 processing me\client\module\player\InvMove.java
+processing me\client\module\player\RAutoClicker.java
 processing me\client\module\render\ClickGUI.java
+processing me\client\module\render\ESP.java
 processing me\client\module\render\Fullbright.java
 processing me\client\module\render\HUD.java
 processing me\client\module\render\NameTags.java

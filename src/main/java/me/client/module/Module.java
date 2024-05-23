@@ -72,7 +72,7 @@ public class Module {
 		}
 	}
 
-    public void onEnable() {
+	public void onEnable() {
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

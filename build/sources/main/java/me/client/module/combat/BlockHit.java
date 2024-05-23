@@ -15,19 +15,20 @@ import org.lwjgl.input.Mouse;
 
 
 public class BlockHit extends Module {
+    private boolean mouseButtonDown = false;
     private long lastHitTime = 0;
     private long lastActivationTime = 0;
     private boolean isBlockActivated = false;
     boolean ACTATTACK;
+    private boolean isDelayOver = false;
     private static final Minecraft mc = Minecraft.getMinecraft();
-   private boolean BotonPres;
-    private boolean BotonPresANT = false;
     public BlockHit() {
         super("BlockHit(Beta)", "Auto Block Hit", Category.COMBAT);
-        Dark.instance.settingsManager.rSetting(new Setting("Duracion", this, 150, 10, 500, true));
-        Dark.instance.settingsManager.rSetting(new Setting("Cooldown", this, 250, 10, 500, true));
+        Dark.instance.settingsManager.rSetting(new Setting("Duracion", this, 150, 1, 500, true));
+        Dark.instance.settingsManager.rSetting(new Setting("Cooldown", this, 250, 2, 500, true));
+        Dark.instance.settingsManager.rSetting(new Setting("Delay", this, 10, 0, 150, true));
         Dark.instance.settingsManager.rSetting(new Setting("MinDist", this, 1.3, 0, 10, false));
-        Dark.instance.settingsManager.rSetting(new Setting("MaxDist", this, 3.5, 0, 10, false));
+        Dark.instance.settingsManager.rSetting(new Setting("MaxDist", this, 3.5, 1, 10, false));
         Dark.instance.settingsManager.rSetting(new Setting("AttkOnly", this, true));
     }
 //TODO: Tengo que mejorar esto ....
@@ -45,16 +46,23 @@ public class BlockHit extends Module {
             ACTATTACK = ATACKONLY;
         }
         if (mc.thePlayer.worldObj.isRemote) {
-            Entity target = mc.objectMouseOver != null ? mc.objectMouseOver.entityHit : null;
+            boolean isMouseButtonDown = Mouse.isButtonDown(0);
+            Entity target = mc.objectMouseOver.entityHit;
             if (isSwordInHand()) {
-            if (target != null && mc.gameSettings.keyBindAttack.isKeyDown()) {
+
+            if (target != null && isMouseButtonDown && !mouseButtonDown && !mc.gameSettings.keyBindUseItem.isKeyDown()) {
                 double distance = event.player.getDistanceToEntity(target);
 
                     if (distance >= minDist && distance <= maxDist && System.currentTimeMillis() - lastActivationTime >= cooldown) {
                             lastHitTime = System.currentTimeMillis();
                             isBlockActivated = true;
+                            isDelayOver = false;
+                    }else{
+                        isBlockActivated = false;
+                        KeyBinding.setKeyBindState(mc.gameSettings.keyBindUseItem.getKeyCode(), false);
                     }
             }
+                mouseButtonDown = isMouseButtonDown;
             if (isBlockActivated && System.currentTimeMillis() - lastHitTime >= duracion) {
                 isBlockActivated = false;
                 KeyBinding.setKeyBindState(mc.gameSettings.keyBindUseItem.getKeyCode(), false);

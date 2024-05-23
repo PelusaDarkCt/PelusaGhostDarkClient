@@ -23,10 +23,11 @@ public class AutoClicker extends Module {
 	private int max;
 	private boolean swordActivado;
 	public AutoClicker() {
-		super("AutoClicker(Unsafe)", "Clickea Por Ti y Tiene Problemas de Compatibilidad jaja", Category.COMBAT);
+		super("LAutoClicker(Unsafe)", "Clickea Por Ti y Tiene Problemas de Compatibilidad", Category.COMBAT);
 
-		Dark.instance.settingsManager.rSetting(new Setting("MinCPS", this, 8, 1, 25, true));
-		Dark.instance.settingsManager.rSetting(new Setting("MaxCPS", this, 12, 1, 25, true));
+		Dark.instance.settingsManager.rSetting(new Setting("LMinCPS (No recomendado)", this, 8, 1, 25, true));
+		Dark.instance.settingsManager.rSetting(new Setting("LMaxCPS (No recomendado)", this, 12, 1, 25, true));
+		Dark.instance.settingsManager.rSetting(new Setting("OnlySword", this, true));
 	}
 
 	@SubscribeEvent
@@ -57,8 +58,8 @@ public class AutoClicker extends Module {
 	}
 
 	private void updateVals() {
-		min = (int) Dark.instance.settingsManager.getSettingByName(this, "MinCPS").getValDouble();
-		max = (int) Dark.instance.settingsManager.getSettingByName(this, "MaxCPS").getValDouble();
+		min = (int) Dark.instance.settingsManager.getSettingByName(this, "LMinCPS (No recomendado)").getValDouble();
+		max = (int) Dark.instance.settingsManager.getSettingByName(this, "LMaxCPS (No recomendado)").getValDouble();
 
 		if (min >= max) {
 			max = min + 1;

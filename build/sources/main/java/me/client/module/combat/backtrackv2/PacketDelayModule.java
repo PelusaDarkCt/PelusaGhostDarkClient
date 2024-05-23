@@ -44,7 +44,6 @@ public class PacketDelayModule extends Module {
         }
     }
 
-
     public void updateAdditionalPing(int value) {
         additionalPing = value;
         Dark.instance.settingsManager.getSettingByName(this, "AdditionalPing").setValDouble(value);

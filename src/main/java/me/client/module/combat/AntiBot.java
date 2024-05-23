@@ -20,9 +20,9 @@ public class AntiBot extends Module {
 	public static List<EntityPlayer> bots = new ArrayList<EntityPlayer>();
 	
 	public AntiBot() {
-		super("AntiBot", "Evita Que Detecte a los bots", Category.COMBAT);
+		super("AntiBot", "Evita Que Ataques a los bots", Category.COMBAT);
 	}
-	//Nose Porque Puse esto pero bueno
+	//Nose Porque esta esto pero bueno (tengo alzaimel)
 	@SubscribeEvent
 	public void onTick(PlayerTickEvent e) {
 		if (Dark.instance.destructed) {

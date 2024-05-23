@@ -18,7 +18,7 @@ compileJava {
     options.encoding = 'UTF-8'
 }
 
-version = "1.0"
+version = "1.2"
 group= "com.pelusa.dark"
 archivesBaseName = "ghostdark"/*TODO: epa te estoy viendo pillo, Dame los Creditos Si lo vas a usar O-o*/
 

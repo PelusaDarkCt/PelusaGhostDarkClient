@@ -53,7 +53,7 @@ public class ClickGui extends GuiScreen {
 		this.mc.fontRendererObj.drawStringWithShadow("v", 90.0f, 8.0f, Color.HSBtoRGB(System.currentTimeMillis() % 15000L / 4250.0f, 0.7f, 0.7f));
 		this.mc.fontRendererObj.drawStringWithShadow("1", 97.0f, 8.0f, Color.HSBtoRGB(System.currentTimeMillis() % 15000L / 4150.0f, 0.7f, 0.7f));
 		this.mc.fontRendererObj.drawStringWithShadow(".", 104.0f, 8.0f, Color.HSBtoRGB(System.currentTimeMillis() % 15000L / 4100.0f, 0.7f, 0.7f));
-		this.mc.fontRendererObj.drawStringWithShadow("0", 107.0f, 8.0f, Color.HSBtoRGB(System.currentTimeMillis() % 15000L / 4000.0f, 0.7f, 0.7f));
+		this.mc.fontRendererObj.drawStringWithShadow("2", 107.0f, 8.0f, Color.HSBtoRGB(System.currentTimeMillis() % 15000L / 4000.0f, 0.7f, 0.7f));
 		GL11.glEnable(2884);
 		GL11.glEnable(3553);
 		GL11.glDisable(3042);

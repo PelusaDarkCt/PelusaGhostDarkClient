@@ -16,7 +16,7 @@ public class FastBridge extends Module {
     private boolean isSneaking = false;
     public FastBridge() {
         super("FastBridge", "Auto Sneak En EL borde Del Bloque", Category.PLAYER);
-        Dark.instance.settingsManager.rSetting(new Setting("OnlyBlocks",this,false));
+        Dark.instance.settingsManager.rSetting(new Setting("OnlyBlocks",this,true));
     }
 
     @Override

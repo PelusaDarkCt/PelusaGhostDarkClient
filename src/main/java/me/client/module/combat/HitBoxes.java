@@ -13,7 +13,7 @@
 
  public class HitBoxes extends Module
 {
-    private AimAssist.NumberValue ExpansV;
+   // private AimAssist.NumberValue ExpansV;
     private Minecraft mc;
     private NumberValue expandVal;
     
